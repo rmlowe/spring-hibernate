@@ -29,7 +29,7 @@ public class DeleteInstructorDetailDemo {
 			// get the instructor detail object
 			int theId = 3;
 			InstructorDetail tempInstructorDetail =
-					session.get(InstructorDetail.class, theId);
+					session.get(InstructorDetail.class, theId);			
 			
 			// print the instructor detail
 			System.out.println("tempInstructorDetail: " + tempInstructorDetail);
@@ -41,6 +41,11 @@ public class DeleteInstructorDetailDemo {
 			// now let's delete the instructor detail
 			System.out.println("Deleting tempInstructorDetail: "
 											+ tempInstructorDetail);
+			
+			// remove the associated object reference
+			// break bi-directional link
+			
+			tempInstructorDetail.getInstructor().setInstructorDetail(null);
 			
 			session.delete(tempInstructorDetail);
 			
