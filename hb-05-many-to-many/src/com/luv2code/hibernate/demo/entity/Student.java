@@ -43,8 +43,6 @@ public class Student {
 	private List<Course> courses;
 	
 	
-	
-	
 	public Student() {
 		
 	}
