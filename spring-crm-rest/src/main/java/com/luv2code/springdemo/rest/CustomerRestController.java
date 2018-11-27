@@ -83,7 +83,7 @@ public class CustomerRestController {
 		if (tempCustomer == null) {
 			throw new CustomerNotFoundException("Customer id not found - " + customerId);
 		}
-		
+				
 		customerService.deleteCustomer(customerId);
 		
 		return "Deleted customer id - " + customerId;
